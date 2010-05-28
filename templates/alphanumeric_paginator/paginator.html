@@ -1,0 +1,22 @@
+{% comment %}
+
+This template assumes the following context variables:
+
+paginator: instance of alhpanumeric_paginator.Paginator
+page: this page
+
+{% endcomment %}
+
+<div>
+  {% for p in paginator.page_range %}
+  {% ifequal p page %}
+  <span class="selected" >{{ p.character }}</span>
+  {% else %}
+      {% if p.is_empty %}
+      <span class="empty">{{ p.character }}</span>
+      {% else %}
+      <a href="?page={{ p.character }}">{{ p.character }}</a>
+      {% endif %}
+  {% endifequal %}
+  {% endfor %}
+</div>
