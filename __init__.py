@@ -1,2 +1,2 @@
-from alphanumeric_paginator.paginator import *
-from alphanumeric_paginator.page import *
+from .paginator import Paginator
+from .page import Page

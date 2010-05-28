@@ -1,4 +1,4 @@
-from alphanumeric_paginator.page import Page
+from .page import Page
 from django.core.paginator import InvalidPage
 
 _ALPHANUMERICS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
